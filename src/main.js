@@ -350,3 +350,12 @@ var returnMarkupTaskCard = () => {
 var returnMarkupBtnLoad = () => {
   return `<button class="load-more" type="button">load more</button>`;
 };
+
+var renderComponent = function (conteiner, component) {
+  conteiner.insertAdjacentHTML('beforeend', component);
+};
+
+var main = document.querySelector('.main');
+var mainConteiner = main.querySelector('.main__control');
+
+renderComponent(mainConteiner, returnMarkupMenu());
