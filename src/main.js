@@ -31,9 +31,7 @@ var returnMarkupMenu = () => {
         </section>`;
 };
 
-returnMarkupMenu();
-
-var renderFilters = () => {
+var returnMarkupFilters = () => {
   return `<section class="main__filter filter container">
   <input
     type="radio"
@@ -96,11 +94,14 @@ var renderFilters = () => {
 };
 
 var returnMarkupSort = () => {
-  return `<div class="board__filter-list">
+  return `<section class="board container">
+  <div class="board__filter-list">
   <a href="#" class="board__filter">SORT BY DEFAULT</a>
   <a href="#" class="board__filter">SORT BY DATE up</a>
   <a href="#" class="board__filter">SORT BY DATE down</a>
-</div>`;
+</div>
+<div class="board__tasks"></div>
+</section>`;
 };
 
 var returnMarkupEditTaskForm = () => {
@@ -359,3 +360,15 @@ var main = document.querySelector('.main');
 var mainConteiner = main.querySelector('.main__control');
 
 renderComponent(mainConteiner, returnMarkupMenu());
+renderComponent(main, returnMarkupFilters());
+renderComponent(main, returnMarkupSort());
+
+var boardElement = main.querySelector('.board');
+var taskListElement = boardElement.querySelector('.board__tasks');
+
+renderComponent(taskListElement, returnMarkupEditTaskForm());
+renderComponent(taskListElement, returnMarkupTaskCard());
+renderComponent(taskListElement, returnMarkupTaskCard());
+renderComponent(taskListElement, returnMarkupTaskCard());
+
+renderComponent(boardElement, returnMarkupBtnLoad());
