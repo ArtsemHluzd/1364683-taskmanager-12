@@ -1,6 +1,6 @@
 'use strict';
 
-var returnMarkupMenu = () => {
+let returnMarkupMenu = () => {
   return `<section class="control__btn-wrap">
           <input
             type="radio"
@@ -31,7 +31,7 @@ var returnMarkupMenu = () => {
         </section>`;
 };
 
-var returnMarkupFilters = () => {
+let returnMarkupFilters = () => {
   return `<section class="main__filter filter container">
   <input
     type="radio"
@@ -93,7 +93,7 @@ var returnMarkupFilters = () => {
 </section>`;
 };
 
-var returnMarkupSort = () => {
+let returnMarkupSort = () => {
   return `<section class="board container">
   <div class="board__filter-list">
   <a href="#" class="board__filter">SORT BY DEFAULT</a>
@@ -104,7 +104,7 @@ var returnMarkupSort = () => {
 </section>`;
 };
 
-var returnMarkupEditTaskForm = () => {
+let returnMarkupEditTaskForm = () => {
   return `<article class="card card--edit card--yellow card--repeat">
   <form class="card__form" method="get">
     <div class="card__inner">
@@ -302,8 +302,9 @@ var returnMarkupEditTaskForm = () => {
     </div>
   </form>
 </article>`;
-  };
-var returnMarkupTaskCard = () => {
+};
+
+let returnMarkupTaskCard = () => {
   return `          <article class="card">
   <div class="card__form">
     <div class="card__inner">
@@ -348,23 +349,23 @@ var returnMarkupTaskCard = () => {
 </article>`;
 };
 
-var returnMarkupBtnLoad = () => {
+let returnMarkupBtnLoad = () => {
   return `<button class="load-more" type="button">load more</button>`;
 };
 
-var renderComponent = function (conteiner, component) {
-  conteiner.insertAdjacentHTML('beforeend', component);
+let renderComponent = function (conteiner, component) {
+  conteiner.insertAdjacentHTML(`beforeend`, component);
 };
 
-var main = document.querySelector('.main');
-var mainConteiner = main.querySelector('.main__control');
+let main = document.querySelector(`.main`);
+let mainConteiner = main.querySelector(`.main__control`);
 
 renderComponent(mainConteiner, returnMarkupMenu());
 renderComponent(main, returnMarkupFilters());
 renderComponent(main, returnMarkupSort());
 
-var boardElement = main.querySelector('.board');
-var taskListElement = boardElement.querySelector('.board__tasks');
+let boardElement = main.querySelector(`.board`);
+let taskListElement = boardElement.querySelector(`.board__tasks`);
 
 renderComponent(taskListElement, returnMarkupEditTaskForm());
 renderComponent(taskListElement, returnMarkupTaskCard());
