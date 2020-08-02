@@ -1,7 +1,7 @@
 # Личный проект «Менеджер задач» [![Build status][travis-image]][travis-url]
 
 * Студент: [Отдел Обучения](https://up.htmlacademy.ru/ecmascript/12/user/1364683).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Рыжаков](https://htmlacademy.ru/profile/id201015).
 
 ---
 
