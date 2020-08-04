@@ -1,5 +1,5 @@
 export const returnMarkupTaskCard = () => {
-  return `          <article class="card">
+  return `<article class="card">
   <div class="card__form">
     <div class="card__inner">
       <div class="card__control">

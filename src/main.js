@@ -1,9 +1,9 @@
 import {returnMarkupMenu} from "./view/markupMenu.js";
 import {returnMarkupFilters} from "./view/markupFilters.js";
 import {returnMarkupSort} from "./view/markupSort.js";
-import {returnMarkupEditTaskForm} from "./view/returnMarkupEditTaskForm.js";
-import {returnMarkupTaskCard} from "./view/returnMarkupTaskCard.js";
-import {returnMarkupBtnLoad} from "./view/returnMarkupBtnLoad.js";
+import {returnMarkupEditTaskForm} from "./view/markupEditTaskForm.js";
+import {returnMarkupTaskCard} from "./view/markupTaskCard.js";
+import {returnMarkupBtnLoad} from "./view/markupBtnLoad.js";
 
 
 let renderComponent = function (conteiner, component) {
